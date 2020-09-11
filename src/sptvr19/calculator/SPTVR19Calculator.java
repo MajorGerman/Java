@@ -1,21 +1,50 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package sptvr19.calculator;
+import java.util.Scanner;
 
-/**
- *
- * @author user
- */
 public class SPTVR19Calculator {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+    
+        System.out.println("~~~ CalcPro2 ~~~");
+        System.out.println("by Georg Laabe\n");
+        
+        while (true) {
+            
+            double num3 = 0;
+            
+            Scanner sc = new Scanner(System.in);
+            
+            System.out.print("Input the first number: ");
+            double num1 = sc.nextInt();
+            System.out.print("Input the second number: ");
+            double num2 = sc.nextInt();
+            System.out.print("Input the operation(+,-,*,/,**): ");
+            sc.nextLine();
+            String operation = sc.nextLine();
+            
+            switch(operation){
+                case "+":{
+                    num3 = num1 + num2;
+                    break;
+                }
+                case "-":{
+                    num3 = num1 - num2;
+                    break;
+                }
+                case "*":{
+                    num3 = num1 * num2;
+                    break;
+                }
+                case "/":{
+                    num3 = num1 / num2;
+                    break;
+                }        
+            }
+            
+            System.out.printf("\nYour Answer is: %.2f\n", num3);
+            System.out.printf(" --------------------------- \n");   
+            
+        }
     }
     
 }
